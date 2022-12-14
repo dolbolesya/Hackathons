@@ -1,6 +1,22 @@
-﻿namespace Hackathons.DAL;
+﻿using Microsoft.EntityFrameworkCore;
 
-public class ApplicationDbContext
+namespace Hackathons.DAL;
+
+public class ApplicationDbContext : DbContext
 {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+        Database.EnsureCreated();
+    }
     
+    protected override void OnConfiguring(DbContextOptionsBuilder builder)
+    {
+        builder.UseSqlServer("DefaultConnection");
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        
+    }
 }
