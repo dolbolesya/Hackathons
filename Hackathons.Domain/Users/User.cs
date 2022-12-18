@@ -1,8 +1,6 @@
-﻿using Hackathons.Domain.Enums;
+﻿namespace Hackathons.Domain.Users;
 
-namespace Hackathons.Domain.Entity;
-
-public class Users
+public class User
 {
     public int Id { get; init; }
     public string? Fullname { get; set; }
