@@ -21,6 +21,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseEndpoints(endpoint =>
+{
+    endpoint.MapGet("/", async context =>
+    {
+        await context.Response.WriteAsync("Hello world");
+    });
+});
 
 app.UseAuthorization();
 
