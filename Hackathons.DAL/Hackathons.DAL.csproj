@@ -11,4 +11,8 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Hackathons.Domain\Hackathons.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

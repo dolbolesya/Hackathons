@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE>
 <html lang="">
 <head>
+    <link rel="icon" type="image/png" href="canvas.png">
     @await Html.PartialAsync("Partial/MetategsPartial")
     @await Html.PartialAsync("Partial/CssPartial")
+
+
     <title>
-        
+
     </title>
 </head>
 <body>
@@ -13,11 +16,13 @@
 </div>
 <div>
     @RenderBody()
+    
 </div>
 <div>
     
     @await Html.PartialAsync("Partial/FooterPartial")
 </div>
     @await Html.PartialAsync("Partial/ScriptsPartial")
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
