@@ -21,18 +21,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseEndpoints(endpoint =>
+
+app.UseEndpoints(endpoints =>
 {
-    endpoint.MapGet("/", async context =>
-    {
-        await context.Response.WriteAsync("Hello world");
-    });
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
 });
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.Run();

@@ -1,18 +1,22 @@
 ﻿<!DOCTYPE>
-<html>
+<html lang="">
 <head>
-    @await Html.PartialAsync("MetategsPartial")
-    @await Html.PartialAsync("CssPartial")
+    @await Html.PartialAsync("Partial/MetategsPartial")
+    @await Html.PartialAsync("Partial/CssPartial")
+    <title>
+        
+    </title>
 </head>
 <body>
 <div>
-    @await Html.PartialAsync("HeaderPartical")
+    @await Html.PartialAsync("Partial/HeaderPartical")
 </div>
 <div>
     @RenderBody()
 </div>
 <div>
-    @await Html.PartialAsync("FooterPartical")
+    @await Html.PartialAsync("Partial/FooterPartial")
 </div>
+    @await Html.PartialAsync("Partial/ScriptsPartial")
 </body>
 </html>
