@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hackathons.Domain.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hackathons.DAL;
 
