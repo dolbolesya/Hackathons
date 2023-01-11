@@ -1,4 +1,6 @@
-﻿namespace Hackathons.Domain.Users;
+﻿using Hackathons.Domain.Enum;
+
+namespace Hackathons.Domain.Users;
 
 public class User
 {

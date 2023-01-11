@@ -1,4 +1,4 @@
-﻿namespace Hackathons.Domain.Enums;
+﻿namespace Hackathons.Domain.Enum;
 
 public enum EventType
 {
@@ -6,5 +6,5 @@ public enum EventType
     Lecture,
     Hackathon,
     GameJame,
-    Olympic 
+    Olympic
 }

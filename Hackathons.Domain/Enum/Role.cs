@@ -1,4 +1,4 @@
-﻿namespace Hackathons.Domain.Users;
+﻿namespace Hackathons.Domain.Enum;
 
 public enum Role
 {

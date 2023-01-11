@@ -1,4 +1,4 @@
-﻿using Hackathons.Domain.Enums;
+﻿using Hackathons.Domain.Enum;
 using Hackathons.Domain.Users;
 
 namespace Hackathons.Domain.Events;
