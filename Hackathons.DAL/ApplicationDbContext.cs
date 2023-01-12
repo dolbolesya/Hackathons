@@ -20,4 +20,7 @@ public sealed class ApplicationDbContext : DbContext
     {
         
     }
+
+    DbSet<User>? Users { get; set; }
+    
 }
