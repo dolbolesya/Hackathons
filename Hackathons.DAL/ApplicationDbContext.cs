@@ -13,7 +13,7 @@ public sealed class ApplicationDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder builder)
     {
-        builder.UseSqlServer("DefaultConnection");
+        builder.UseSqlServer(@"Server=WIN-4CRJ2VRDGKE\\SQLEXPRESS;Database=Hackathons;Trusted_Connection=True;MultipleActiveResultSets=true");
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

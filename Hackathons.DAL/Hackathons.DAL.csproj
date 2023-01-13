@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <UserSecretsId>1ea6ebc3-50d4-49c0-a9ee-7f95bc7b9c3f</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +15,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Hackathons.Domain\Hackathons.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migration" />
     </ItemGroup>
 
 </Project>
