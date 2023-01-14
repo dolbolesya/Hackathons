@@ -4,13 +4,15 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(
-        "Server=WIN-4CRJ2VRDGKE\\SQLEXPRESS;Database=Hackathons;Trusted_Connection=True;MultipleActiveResultSets=true");
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => 
+    b.MigrationsAssembly("Hackathons.Migrations")
+    );
 
 });
-
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

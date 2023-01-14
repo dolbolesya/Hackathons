@@ -9,6 +9,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Hackathons.DAL\Hackathons.DAL.csproj" />
+      <ProjectReference Include="..\Hackathons.DAL\Hackathons.DAL.csproj" />
+    </ItemGroup>
+	<ItemGroup>
+		
+      <ProjectReference Include="..\Hackathons.Migrations\Hackathons.Migrations.csproj" />
     </ItemGroup>
 
     <ItemGroup>

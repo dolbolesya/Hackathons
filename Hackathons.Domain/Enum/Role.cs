@@ -1,4 +1,6 @@
-﻿namespace Hackathons.Domain.Enum;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Hackathons.Domain.Enum;
 
 public enum Role
 {
