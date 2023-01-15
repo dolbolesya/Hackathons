@@ -1,5 +1,10 @@
-﻿using Hackathons.DAL.Interfaces;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Hackathons.DAL.Interfaces;
 using Hackathons.Domain.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hackathons.DAL.Repositories;
 
@@ -11,29 +16,43 @@ public class UserRepository : IUserRepository
     {
         _db = db;
     }
-    
-    public bool Create(User entity)
+
+    public async Task<bool> Create(User entity)
     {
-        throw new NotImplementedException();
+        await _db.Users.AddAsync(entity);
+        await _db.SaveChangesAsync();
+
+        return true;
     }
 
-    public User Get(int id)
+    public async Task<User> Get(int id)
     {
-        throw new NotImplementedException();
+        return await _db.Users.FirstOrDefaultAsync(x => x.Id == id);
     }
 
-    public IEnumerable<User> Select()
+    public async Task<List<User>> Select()
     {
-        throw new NotImplementedException();
+        return await _db.Users.ToListAsync();
     }
 
-    public bool Delete(User entity)
+    public async Task<bool> Delete(User entity)
     {
-        throw new NotImplementedException();
+        _db.Users.Remove(entity);
+        await _db.SaveChangesAsync();
+
+        return true;
     }
 
-    public User GetByName(string name)
+    public async Task<User> Update(User entity)
     {
-        throw new NotImplementedException();
+        _db.Users.Update(entity);
+        await _db.SaveChangesAsync();
+
+        return entity;
+    }
+
+    public async Task<User> GetByUsername(string username)
+    {
+        return await _db.Users.FirstOrDefaultAsync(x => x.Username == username);
     }
 }

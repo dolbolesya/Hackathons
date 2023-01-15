@@ -17,7 +17,7 @@ public sealed class ApplicationDbContext : DbContext
         
     }
 
-    DbSet<User>? Users { get; set; }
-    DbSet<Event>? Events { get; set; }
+    public DbSet<User>? Users { get; set; }
+    public DbSet<Event>? Events { get; set; }
 
 }

@@ -4,11 +4,11 @@ public interface IBaseRepository<T>
 {
     // CRUD
 
-    bool Create(T entity);
+    Task<bool> Create(T entity);
 
-    T Get(int id);
+    Task<T> Get(int id);
 
-    IEnumerable<T> Select();
+    Task<bool> Delete(T entity);
 
-    bool Delete(T entity);
+    Task<T> Update(T entity);
 }
